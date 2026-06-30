@@ -16,11 +16,24 @@ The current experiment evaluates whether Bedrock models can infer tool contracts
 ```text
 .
 ├── README.md
+├── REPRODUCIBILITY.md
+├── CITATION.cff
 ├── LICENSE
 ├── requirements.txt
 ├── .gitignore
-└── code/
-    └── contract2tool_intrinsic_bedrock.py
+├── code/
+│   └── contract2tool_intrinsic_bedrock.py
+├── reproducibility/
+│   ├── run_config_main.json
+│   └── environment.md
+└── results/
+    ├── contract_predictions_scored_name_metadata_schema_9models.csv
+    ├── intrinsic_metrics_name_metadata_schema_9models.csv
+    ├── contract_predictions_scored_docs_9models.csv
+    ├── intrinsic_metrics_docs_9models.csv
+    ├── contract_predictions_scored_traces_hybrid_4models.csv
+    ├── intrinsic_metrics_traces_hybrid_4models.csv
+    └── results_intrinsic_merged_clean.csv
 ```
 
 ## Main experiment
@@ -95,6 +108,22 @@ contract_predictions_scored.csv
 intrinsic_metrics_by_model_evidence.csv
 ```
 
+## Public results
+
+The public repository includes curated scored and aggregate result CSVs.
+
+```text
+results/contract_predictions_scored_name_metadata_schema_9models.csv
+results/intrinsic_metrics_name_metadata_schema_9models.csv
+results/contract_predictions_scored_docs_9models.csv
+results/intrinsic_metrics_docs_9models.csv
+results/contract_predictions_scored_traces_hybrid_4models.csv
+results/intrinsic_metrics_traces_hybrid_4models.csv
+results/results_intrinsic_merged_clean.csv
+```
+
+These files intentionally exclude raw model completions. The merged clean aggregate excludes failed/end-of-life model runs.
+
 ## Public artifact policy
 
 This repository is intended to contain clean reproducibility code and curated artifacts only.
@@ -109,7 +138,7 @@ Do not upload:
 - local EC2 paths beyond illustrative run commands
 - review-submission metadata
 
-For a public release, prefer `contract_predictions_scored.csv` and `intrinsic_metrics_by_model_evidence.csv` over raw JSONL predictions.
+For a public release, prefer scored CSVs and aggregate summaries over raw JSONL predictions.
 
 ## License
 
