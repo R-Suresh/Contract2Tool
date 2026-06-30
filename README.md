@@ -1,6 +1,13 @@
-# Contract2Tool
+# Contract2Tool: Learning Preconditions and Effects for Reliable Tool-Augmented LLM Agents
 
-Contract2Tool is an experimental framework for learning lightweight tool contracts for tool-augmented LLM agents.
+**Authors:** Rahul Suresh Babu and Laxmipriya Ganesh Iyer  
+**arXiv:** [2606.07904](https://arxiv.org/abs/2606.07904)  
+**Repository:** Public reproducibility package for the Contract2Tool arXiv paper  
+**License:** MIT
+
+## At a glance
+
+Contract2Tool studies whether large language models can infer lightweight tool contracts from tool evidence such as tool name, metadata, schema, documentation, and execution traces.
 
 A tool contract contains:
 
@@ -9,7 +16,20 @@ A tool contract contains:
 - `risk`: coarse risk level such as low, medium, or high
 - `cost`: optional coarse cost/latency label
 
-The current experiment evaluates whether Bedrock models can infer tool contracts from tool evidence such as tool name, description, schema, documentation, or traces, then scores predictions against gold contracts.
+## Headline public results
+
+The public artifact release contains curated scored CSVs and aggregate summaries over 100 tools per evaluated model/evidence condition. Raw model completions are intentionally excluded.
+
+Key headline results from the released aggregate artifacts:
+
+- Schema and documentation evidence often recover preconditions very strongly; several evaluated configurations reach `requires_f1 = 1.00`.
+- The strongest released configuration is `us.anthropic.claude-opus-4-8` with documentation evidence, reaching `requires_f1 = 1.00`, `produces_f1 = 0.9557`, `risk_accuracy = 0.82`, and `exact_match = 0.75`.
+- The strongest schema-based released configuration is also `us.anthropic.claude-opus-4-8`, reaching `requires_f1 = 1.00`, `produces_f1 = 0.9540`, `risk_accuracy = 0.79`, and `exact_match = 0.72`.
+- The merged clean aggregate excludes failed or end-of-life model runs; raw JSONL predictions and raw provider metadata are not part of the public release.
+
+## Why this matters
+
+Tool-augmented LLM agents are increasingly deployed with large tool libraries. Contract2Tool provides a way to infer compact precondition/effect contracts that can support safer tool filtering, better orchestration, and more reliable agent execution.
 
 ## Repository contents
 
@@ -123,6 +143,18 @@ results/results_intrinsic_merged_clean.csv
 ```
 
 These files intentionally exclude raw model completions. The merged clean aggregate excludes failed/end-of-life model runs.
+
+## Citation
+
+If you use this repository or artifact package, please cite:
+
+```text
+Contract2Tool: Learning Preconditions and Effects for Reliable Tool-Augmented LLM Agents
+Rahul Suresh Babu and Laxmipriya Ganesh Iyer
+arXiv: 2606.07904
+```
+
+The machine-readable citation metadata is available in `CITATION.cff`.
 
 ## Public artifact policy
 
