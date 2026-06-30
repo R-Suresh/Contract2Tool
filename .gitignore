@@ -1,15 +1,47 @@
-# Contract2Tool results and logs
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Raw/generated outputs
 results/
 results_*/
 *.log
 *.jsonl
 *.csv
 
+# Allow curated public artifacts when added later
+!data/
+!data/*.json
+
+!tables/
+!tables/*.csv
+!tables/*.tex
+
+!figures/
+!figures/*.png
+!figures/*.pdf
+
+!reproducibility/
+!reproducibility/*.json
+!reproducibility/*.md
+
 # Archives
 *.zip
 *.tar.gz
 
-# Secrets / keys
+# Secrets / keys / local cloud config
 *.pem
+*.key
 .env
+.env.*
 .aws/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
