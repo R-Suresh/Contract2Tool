@@ -1,0 +1,32 @@
+{
+  "paper": "Contract2Tool: Learning Preconditions and Effects for Reliable Tool-Augmented LLM Agents",
+  "arxiv_id": "2606.07904",
+  "runner": "code/contract2tool_intrinsic_bedrock.py",
+  "source_tool_module": "/home/ec2-user/scaledExperiment_main.py",
+  "tools_var": "TOOLS",
+  "evidence_conditions": [
+    "name",
+    "metadata",
+    "schema"
+  ],
+  "supported_evidence_conditions": [
+    "name",
+    "metadata",
+    "schema",
+    "docs",
+    "traces",
+    "hybrid"
+  ],
+  "models_example": [
+    "us.amazon.nova-2-lite-v1:0"
+  ],
+  "aws_region": "us-east-1",
+  "raw_predictions_publicly_released": false,
+  "expected_outputs": [
+    "contract_predictions_raw.jsonl",
+    "contract_predictions_scored.csv",
+    "intrinsic_metrics_by_model_evidence.csv"
+  ],
+  "public_artifact_policy": "Release scored CSVs and aggregate summaries. Do not release raw JSONL predictions unless inspected and sanitized.",
+  "notes": "Public repository contains curated reproducibility artifacts only. Raw model outputs, request metadata, cloud logs, and credentials are intentionally excluded."
+}
