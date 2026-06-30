@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or reproducibility package, please cite the associated arXiv paper."
+title: "Contract2Tool: Learning Preconditions and Effects for Reliable Tool-Augmented LLM Agents"
+authors:
+  - family-names: "Suresh Babu"
+    given-names: "Rahul"
+  - family-names: "Iyer"
+    given-names: "Laxmipriya Ganesh"
+year: 2026
+version: "v1.0-arxiv"
+license: "MIT"
+repository-code: "https://github.com/R-Suresh/Contract2Tool"
+url: "https://arxiv.org/abs/2606.07904"
+abstract: "Contract2Tool is a framework for inferring lightweight tool contracts from metadata, schemas, documentation, and execution traces for reliable tool-augmented LLM agents."
+keywords:
+  - "LLM agents"
+  - "tool use"
+  - "tool contracts"
+  - "preconditions"
+  - "effects"
+  - "agent reliability"
+  - "Contract2Tool"
+preferred-citation:
+  type: article
+  title: "Contract2Tool: Learning Preconditions and Effects for Reliable Tool-Augmented LLM Agents"
+  authors:
+    - family-names: "Suresh Babu"
+      given-names: "Rahul"
+    - family-names: "Iyer"
+      given-names: "Laxmipriya Ganesh"
+  year: 2026
+  url: "https://arxiv.org/abs/2606.07904"
