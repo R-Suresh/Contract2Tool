@@ -1,0 +1,10 @@
+model,evidence,n,requires_precision,requires_recall,requires_f1,produces_precision,produces_recall,produces_f1,risk_accuracy,cost_accuracy,exact_match,valid_json,normalization_ok
+us.amazon.nova-2-lite-v1:0,docs,100,1.0,1.0,1.0,0.6247619047619047,0.64,0.6275,0.63,1.0,0.41,1.0,1.0
+us.amazon.nova-2-pro-preview-20251202-v1:0,docs,100,1.0,1.0,1.0,0.5783333333333334,0.6,0.585,0.63,1.0,0.33,1.0,1.0
+us.amazon.nova-premier-v1:0,docs,100,1.0,1.0,1.0,0.43,0.43,0.43,0.63,0.94,0.23,1.0,0.99
+us.anthropic.claude-3-5-haiku-20241022-v1:0,docs,100,0.9633333333333334,0.965,0.9616666666666667,0.8808333333333335,0.95,0.899,0.63,1.0,0.54,0.99,1.0
+us.anthropic.claude-3-7-sonnet-20250219-v1:0,docs,100,0.01,0.01,0.01,0.0,0.0,0.0,0.63,1.0,0.0,0.0,1.0
+us.anthropic.claude-opus-4-8,docs,100,1.0,1.0,1.0,0.9458333333333333,0.98,0.9556666666666667,0.82,0.97,0.75,1.0,1.0
+us.anthropic.claude-sonnet-4-20250514-v1:0,docs,100,1.0,1.0,1.0,0.8625,0.87,0.8640000000000001,0.66,0.98,0.58,1.0,1.0
+us.anthropic.claude-sonnet-4-6,docs,100,1.0,1.0,1.0,0.9420000000000001,0.95,0.9433333333333335,0.77,0.97,0.72,1.0,1.0
+us.meta.llama3-3-70b-instruct-v1:0,docs,100,1.0,1.0,1.0,0.8053333333333333,0.87,0.8216666666666668,0.63,1.0,0.51,1.0,1.0
