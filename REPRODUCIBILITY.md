@@ -13,6 +13,14 @@ The goal of this repository is to provide clean, arXiv-compatible code and curat
 ├── reproducibility/
 │   ├── run_config_main.json
 │   └── environment.md
+├── results/
+│   ├── contract_predictions_scored_name_metadata_schema_9models.csv
+│   ├── intrinsic_metrics_name_metadata_schema_9models.csv
+│   ├── contract_predictions_scored_docs_9models.csv
+│   ├── intrinsic_metrics_docs_9models.csv
+│   ├── contract_predictions_scored_traces_hybrid_4models.csv
+│   ├── intrinsic_metrics_traces_hybrid_4models.csv
+│   └── results_intrinsic_merged_clean.csv
 ├── README.md
 ├── REPRODUCIBILITY.md
 ├── CITATION.cff
@@ -21,11 +29,10 @@ The goal of this repository is to provide clean, arXiv-compatible code and curat
 └── .gitignore
 ```
 
-Curated result folders may be added later once sanitized result artifacts are available:
+Additional curated folders may be added later if needed:
 
 ```text
 data/
-results/
 tables/
 figures/
 ```
@@ -36,10 +43,28 @@ The repository currently includes:
 
 - Main intrinsic Contract2Tool experiment runner
 - README with setup and run commands
+- Curated scored result CSVs
+- Curated aggregate result CSVs
 - Reproducibility notes
 - Citation metadata
 - Environment documentation
 - Git ignore rules that exclude raw traces, credentials, and generated logs
+
+## Public result artifacts
+
+The public result artifacts are:
+
+```text
+results/contract_predictions_scored_name_metadata_schema_9models.csv
+results/intrinsic_metrics_name_metadata_schema_9models.csv
+results/contract_predictions_scored_docs_9models.csv
+results/intrinsic_metrics_docs_9models.csv
+results/contract_predictions_scored_traces_hybrid_4models.csv
+results/intrinsic_metrics_traces_hybrid_4models.csv
+results/results_intrinsic_merged_clean.csv
+```
+
+The scored CSVs contain normalized predictions and derived metrics but exclude the raw model completion field. The aggregate CSVs summarize metrics by model and evidence condition. The merged clean aggregate excludes failed/end-of-life model runs.
 
 ## What is intentionally excluded
 
@@ -138,10 +163,9 @@ intrinsic_metrics_by_model_evidence.csv
 For public release, prefer curated and derived files such as:
 
 ```text
-results/contract_predictions_scored.csv
-results/intrinsic_metrics_by_model_evidence.csv
-tables/*.tex
-figures/*.png
+results/contract_predictions_scored_*.csv
+results/intrinsic_metrics_*.csv
+results/results_intrinsic_merged_clean.csv
 reproducibility/run_config_main.json
 reproducibility/environment.md
 ```
